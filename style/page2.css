@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+main{
+    width: 400px;
+    height: 400px;
+border-radius: 40px;
+background-color: whitesmoke; /* Dark container background */
+box-shadow: 0 4px 8px rgba(106, 99, 99, 0.3);
+max-width: 350px;
+margin: 8rem auto;
+padding: 10px;
+text-align: center;
+}
+
+
+
+#myElement {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    color: #181818;
+    border-radius: 30px;
+background-color: #222; /* Dark container background */
+box-shadow: 0 4px 8px rgba(206, 206, 206, 0.3);
+max-width: 350px;
+margin: 40px auto;
+padding: 20px;
+text-align: center;
+}
+        
+    input{
+        border-radius: 3px;
+        border: solid 1px rgb(155, 154, 154);
+        padding: 4px;
+    }
+    button{
+        padding: 8px 12px;
+        border-radius: 15px;
+        border: none;
+        background-color: rgb(45, 45, 45);
+        color: #fff;
+    }
+    button:hover{
+        background-color: #5f5c5c;
+    }

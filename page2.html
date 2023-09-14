@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/page2.css">
+    <title>DOMs</title>
+</head>
+<body>
+  <div class="header" id="fixed-header">
+    <nav>
+      <ul>
+        <li class="name">JSMOTO</li>
+        <li class="right">
+          <a href="index.html">Home</a>
+          <a href="page2.html">Event</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    <main>
+    <div id="myElement">Hover me</div>
+    
+    <input type="text" id="myInput" placeholder="Type something"><br>
+    
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Username" class="form"><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p id="resizeMessage">Window dimensions: </p>
+    
+    <div id="dblClickDiv">Double click me</div>
+    </main>
+    <script>
+        // Mouseover and Mouseout Events
+        const element = document.getElementById('myElement');
+        
+        element.addEventListener('mouseover', () => {
+            element.style.backgroundColor = 'lightgreen';
+        });
+        
+        element.addEventListener('mouseout', () => {
+            element.style.backgroundColor = 'lightblue';
+        });
+        
+        // Keydown Event
+        const input = document.getElementById('myInput');
+        
+        input.addEventListener('keydown', (event) => {
+            console.log(`Key pressed: ${event.key}`);
+        });
+        
+        // Form Submission
+        const form = document.getElementById('myForm');
+        
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            console.log(formData.get('username'));
+        });
+        
+        // Window Resize Event
+        const resizeMessage = document.getElementById('resizeMessage');
+        
+        function updateMessage() {
+            resizeMessage.textContent = `Window dimensions: ${window.innerWidth} x ${window.innerHeight}`;
+        }
+        
+        window.addEventListener('resize', updateMessage);
+        updateMessage(); // Initial update
+        
+        // Double Click Event
+        const dblClickDiv = document.getElementById('dblClickDiv');
+        const messages = [
+            "Double click event occurred!",
+            "You double clicked again!",
+            "Keep double clicking!",
+            "Wow, another double click!",
+            "It's a double click party!"
+        ];
+        let messageIndex = 0;
+
+        dblClickDiv.addEventListener('dblclick', () => {
+            dblClickDiv.textContent = messages[messageIndex];
+            messageIndex = (messageIndex + 1) % messages.length;
+        });
+
+    </script>
+</body>
+</head>
+</html>

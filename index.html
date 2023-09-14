@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header" id="fixed-header">
+        <nav>
+          <ul>
+            <li class="name">JSMOTO</li>
+            <li class="right">
+              <a href="index.html">Home</a>
+              <a href="page2.html">Event</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+        <div class="container">
+        <div class="grid">
+            <img src="media/image1.jpg" alt="An example image" class="myImage" id="myImage"><br>
+    
+            <button id="changeImageBtn1">
+            Change Image
+            </button>
+            
+        </div >
+
+        <div class="grid">
+          <img class="myImage" src="media/image2.jpg" alt="An example image" id="myImage2"><br>
+  
+          <button id="changeImageBtn2">
+          Change Image
+          </button>
+          
+        </div>
+
+        <div class="grid">
+          <img class="myImage" src="media/image3.png" alt="An example image" id="myImage3"><br>
+          
+          <button id="changeImageBtn3">
+          Change Image
+          </button>
+          
+        </div>
+      </div>
+
+        <div class="container2">
+          <div class="video-grid">
+            <video width="420" height="340" controls  id="myVideo">
+              <source src="media/video1.mp4" type="video/mp4">
+              <source src="media/video1.mp4" type="video/ogg">
+            </video><br>
+            <button id="changeVideoBtn1">
+              Change Image
+              </button>
+          </div>
+            
+          <div class="video-grid">
+            <video width="420" height="340" controls   id="myVideo2">
+              <source src="media/video2.mp4" type="video/mp4">
+              <source src="media/video2.mp4" type="video/ogg">
+            </video><br>
+            <button id="changeVideoBtn2">
+              Change Image
+              </button>
+          </div>
+
+          <div class="video-grid">
+            <video width="420" height="340" controls id="myVideo3">
+              <source src="media/video3.mp4" type="video/mp4">
+              <source src="media/video3.mp4" type="video/ogg">
+            </video><br>
+            <button id="changeVideoBtn3">
+              Change Image
+              </button>
+          </div>
+        </div>
+
+        <script>
+          const oneImageElement = document.getElementById("myImage"); 
+          const oneButtonElement = document.getElementById("changeImageBtn1"); 
+          oneButtonElement.addEventListener('click', function(){ oneImageElement.src = 'media/new1.png'; 
+          oneButtonElement.textContent = "image changed!"; })
+          
+          const twoImageElement = document.getElementById("myImage2"); 
+          const twoButtonElement = document.getElementById("changeImageBtn2"); 
+          twoButtonElement.addEventListener('click', function(){ twoImageElement.src = 'media/image1.jpg'; 
+          twoButtonElement.textContent = "image changed!"; })
+          
+          const threeImageElement = document.getElementById("myImage3"); 
+          const threeButtonElement = document.getElementById("changeImageBtn3"); 
+          threeButtonElement.addEventListener('click', function(){ threeImageElement.src = 'media/image2.jpg'; 
+          threeButtonElement.textContent = "image changed!"; })
+
+          //video
+          const oneVideoElement = document.getElementById("myVideo"); 
+          const firstButtonElement = document.getElementById("changeVideoBtn1"); 
+          firstButtonElement.addEventListener('click', function(){ oneVideoElement.src = 'media/video4.mp4'; 
+          firstButtonElement.textContent = "video changed!"; })
+
+          const twoVideoElement = document.getElementById("myVideo2"); 
+          const secondButtonElement = document.getElementById("changeVideoBtn2"); 
+          secondButtonElement.addEventListener('click', function(){ twoVideoElement.src = 'media/video3.mp4'; 
+          secondButtonElement.textContent = "video changed!"; })
+
+          const threeVideoElement = document.getElementById("myVideo3"); 
+          const thirdButtonElement = document.getElementById("changeVideoBtn3"); 
+          thirdButtonElement.addEventListener('click', function(){ threeVideoElement.src = 'media/video1.mp4'; 
+          thirdButtonElement.textContent = "video changed!"; })
+
+        </script>
+  
+      </div>
+</body>
+</html>

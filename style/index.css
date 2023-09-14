@@ -1,0 +1,32 @@
+img.myImage{
+  width: 400px;
+  border-radius: 4px;
+}
+.container{
+  width: 100%;
+	margin: 6rem auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.grid{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.container2{
+  width: 100%;
+	margin: 2rem auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.video-grid{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
